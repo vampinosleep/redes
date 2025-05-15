@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>Fusion</RootNamespace>
-    <ProjectGuid>{DC22A48F-485B-AC22-F162-5B3415A466EE}</ProjectGuid>
+    <ProjectGuid>{3B650B18-EC79-7497-05AB-ADC1DB9845BE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Fusion.Unity</AssemblyName>

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>Fusion.Addons.Physics</RootNamespace>
-    <ProjectGuid>{033511BB-C4B0-5CC3-D8F1-2A33A908D718}</ProjectGuid>
+    <ProjectGuid>{8D209F52-A63E-F927-98E6-AEFB8621F956}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Fusion.Addons.Physics</AssemblyName>
@@ -991,7 +991,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Fusion.Unity.csproj">
-      <Project>{DC22A48F-485B-AC22-F162-5B3415A466EE}</Project>
+      <Project>{3B650B18-EC79-7497-05AB-ADC1DB9845BE}</Project>
       <Name>Fusion.Unity</Name>
     </ProjectReference>
   </ItemGroup>

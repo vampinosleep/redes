@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>Fusion</RootNamespace>
-    <ProjectGuid>{0B0A7FA2-8F28-52F6-9C97-217F05B26031}</ProjectGuid>
+    <ProjectGuid>{154F8C4D-40F0-60EE-6C99-41F286AE75CB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Fusion.Unity.Editor</AssemblyName>
@@ -967,15 +967,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Fusion.Unity.csproj">
-      <Project>{DC22A48F-485B-AC22-F162-5B3415A466EE}</Project>
+      <Project>{3B650B18-EC79-7497-05AB-ADC1DB9845BE}</Project>
       <Name>Fusion.Unity</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{9AB526E7-27F6-A9FE-0ACB-BFA36B254E9A}</Project>
+      <Project>{439B65AA-0713-A0F8-6410-221D93DF40D0}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{056EAB7B-0ED0-E92C-1C4A-B520973BA91B}</Project>
+      <Project>{11FB5837-649B-1DFC-BCA8-02D094D76194}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

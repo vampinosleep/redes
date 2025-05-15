@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>Fusion.CodeGen</RootNamespace>
-    <ProjectGuid>{6CBADA5B-0916-6736-CF02-0838DEB46DDF}</ProjectGuid>
+    <ProjectGuid>{9684076F-58E0-5108-4D54-6218A13BC6F6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Fusion.CodeGen</AssemblyName>
