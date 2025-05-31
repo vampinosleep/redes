@@ -1,49 +1,39 @@
+﻿using System.Linq; // Necesario para usar .Count()
 using UnityEngine;
 using Fusion;
 
-public class PlayerSpawner : SimulationBehaviour, IPlayerJoined
+public class PlayerSpawner : NetworkBehaviour, IPlayerJoined
 {
     [SerializeField] private GameObject _playerPrefab;
-
     [SerializeField] private Transform[] _spawnTransforms;
 
-    private bool _initialized;
-    
-    //Se ejecuta por CADA cliente conectado
-    public void PlayerJoined(PlayerRef player)
+    private bool _gameStarted = false;
+
+    public override void Spawned()
     {
-        var playersCount = Runner.SessionInfo.PlayerCount;
-        
-        if (_initialized && playersCount >= 2)
-        {
-            CreatePlayer(0);
-            return;
-        }
-        
-        //Si el cliente que entro, es el mismo cliente donde corre este codigo, entonces:
-        if (player == Runner.LocalPlayer)
-        {
-            if (playersCount < 2)
-            {
-                _initialized = true;
-            }
-            else
-            {
-                CreatePlayer(playersCount - 1);
-            }
-            
-            //if (playersCount - 1 >= _spawnTransforms.Length) return;
-        }
+        Debug.Log("Spawner activo.");
     }
 
-    void CreatePlayer(int spawnPointIndex)
+    public void PlayerJoined(PlayerRef player)
     {
-        _initialized = false;
-        
-        var newPosition = _spawnTransforms[spawnPointIndex].position;
-        var newRotation = _spawnTransforms[spawnPointIndex].rotation;
-        
-        
-        Runner.Spawn(_playerPrefab, newPosition, newRotation);
+        Debug.Log($"Jugador unido: {player.PlayerId}");
+
+        // Si hay 2 jugadores y el juego aún no comenzó, lo iniciamos
+        if (Runner.ActivePlayers.Count() == 2 && !_gameStarted)
+        {
+            _gameStarted = true;
+            GameManager.Instance.RPC_StartGame();
+        }
+
+        // Si el juego ya comenzó, y este es el jugador local, hacemos spawn
+        if (GameManager.Instance.GameStarted && player == Runner.LocalPlayer)
+        {
+            int spawnIndex = player.RawEncoded % _spawnTransforms.Length;
+            Vector3 spawnPos = _spawnTransforms[spawnIndex].position;
+            Quaternion spawnRot = _spawnTransforms[spawnIndex].rotation;
+
+            Runner.Spawn(_playerPrefab, spawnPos, spawnRot, player);
+            Debug.Log($"Jugador {player.PlayerId} instanciado en punto {spawnIndex}");
+        }
     }
 }

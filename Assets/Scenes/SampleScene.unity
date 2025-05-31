@@ -174,7 +174,7 @@ MonoBehaviour:
   AutoClients: 1
   ClientStartDelay: 0.1
   ServerPort: 0
-  DefaultRoomName: 
+  DefaultRoomName: room1
   InitialScenePath: 
   _currentStage: 0
   AutoConnectVirtualInstances: 1
@@ -602,6 +602,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _winImage: {fileID: 1268618241}
   _loseImage: {fileID: 943194144}
+  _waitingPanel: {fileID: 0}
+  _GameStarted: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,6 +1092,8 @@ GameObject:
   - component: {fileID: 1213076876}
   - component: {fileID: 1213076878}
   - component: {fileID: 1213076875}
+  - component: {fileID: 1213076880}
+  - component: {fileID: 1213076879}
   m_Layer: 0
   m_Name: Prototype Runner
   m_TagString: Untagged
@@ -1209,6 +1213,37 @@ MonoBehaviour:
   _spawnTransforms:
   - {fileID: 1015127687}
   - {fileID: 126582599}
+--- !u!114 &1213076879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213076874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 526b142195d343c39a9184405f9ed5e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NetworkObject: {fileID: 0}
+--- !u!114 &1213076880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213076874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 3126975400
+  ObjectInterest: 1
+  Flags: 262145
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 1213076878}
 --- !u!1 &1268618241
 GameObject:
   m_ObjectHideFlags: 0
